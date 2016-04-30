@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.set("views", path.join(__dirname, "public/views"));
 app.engine(".hbs", exphbs({
-  default: "layout",
+  defaultLayout: "layout",
   layoutsDir: path.join(__dirname, "public/views/layouts"),
   partialsDir: path.join(__dirname, "public/views/partials"),
   extname: ".hbs"
@@ -23,9 +23,11 @@ app.set("view engine", ".hbs");
 app.use(helmet());
 app.use(morgan("dev"));
 app.set("PORT", process.env.PORT|| 7678);
+app.set("NODE_ENV", process.argv[0] === "node" ? "production" : "development");
 
 app.use("/", routes);
 
 app.listen(app.get("PORT"), function(){
-  console.log("Your Node Email Application is currently listening on port: %s.", app.get("PORT"));
+  console.log("Your Node Email Application is listening on port: %s.", app.get("PORT"));
+  console.log("Environment: %s", app.get("NODE_ENV"));
 });
