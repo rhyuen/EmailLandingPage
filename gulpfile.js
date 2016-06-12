@@ -33,5 +33,5 @@ gulp.task("browserSync", function(){
 
 
 gulp.task("watch", ["browserSync"], function(){
-  gulp.watch("*.hbs").on("change", browserSync.reload);
+  gulp.watch("./public/views/**/*.hbs").on("change", browserSync.reload);
 });

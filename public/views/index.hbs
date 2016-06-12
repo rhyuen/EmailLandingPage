@@ -1,36 +1,94 @@
-<div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
-  <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
-    <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Robert Yuen</span>
+<style>
+html{
+  background-image: url("../images/fw2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: fixed;
+}
+
+.card {
+  min-height: 150px;
+  background-color: orange;
+}
+</style>
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--2-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--2-col"></div>
+      <div class="mdl-cell mdl-cell--2-col"></div>
+      <div class="mdl-cell mdl-cell--2-col"></div>
     </div>
-  </header>
-  <div class="demo-ribbon"></div>
-  <main class="demo-main mdl-layout__content">
-    <div class="demo-container mdl-grid">
-      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-      <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+
+    <div class="mdl-grid">
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+    </div>
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--3-col"></div>
+      <div class="mdl-color--orange mdl-shadow--4dp content mdl-cell mdl-cell--3-col">
         <p>Welcome to my email landing page</p>
         <p>Please sign up for future emails and updates below</p>
 
         <form action= "/" method = "post">
-          <input type = "text" placeholder = "email" name = "email"></input>
-          <input type = "text" placeholder = "name" name = "name"></input>
-          <input type = "submit" value = "submit"></input>
-        </form>
+          <div class = "mdl-textfield mdl-js-textfield">
+            <input class = "mdl-textfield__input" type = "text" placeholder = "email" name = "email"></input>
+            <input class = "mdl-textfield__input" type = "text" placeholder = "name" name = "name"></input>
+            <button class = "mdl-button mdl-jsbutton mdl-button--raised mdl-js-ripple-effect">
+              Subscribe
+            </button>
 
+          </div>
+        </form>
       </div>
+        <div class="mdl-cell mdl-cell--4-col"></div>
+      <div class="mdl-cell mdl-cell--6-col"></div>
     </div>
-    <footer class="demo-footer mdl-mini-footer">
-      <div class="mdl-mini-footer--left-section">
-        <ul class="mdl-mini-footer--link-list">
-          <li><a href="#">Help</a></li>
-          <li><a href="#">Privacy and Terms</a></li>
-          <li><a href="#">User Agreement</a></li>
-        </ul>
-      </div>
-    </footer>
-  </main>
-</div>
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+    </div>
+
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="card mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+      <div class="mdl-cell mdl-cell--1-col"></div>
+    </div>
+
 <script type = "text/javascript">
   function clearFormFields(){
     $(document).getElementsByName("email").value = "";
