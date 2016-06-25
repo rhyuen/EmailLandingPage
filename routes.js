@@ -3,7 +3,7 @@ var router = express.Router();
 var path = require("path");
 var mongoose = require("mongoose");
 var Email = require("./models/email.js");
-var nconf = require("./nconf.js");
+var config = require("./config.js");
 
 router.get("/", function(req, res){
   res.render("index");
@@ -12,7 +12,7 @@ router.get("/", function(req, res){
 });
 
 router.post("/", function(req, res){
-  mongoose.connect(nconf.get("db"), function(err){
+  mongoose.connect(config.db, function(err){
     if(err)
       console.error(err);
     console.log("Db conn attempted.");
@@ -42,5 +42,8 @@ router.post("/", function(req, res){
   });
 });
 
+router.get("/*", function(req, res){
+  res.redirect("/");
+});
 
 module.exports = router;
