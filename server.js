@@ -23,7 +23,7 @@ app.set("view engine", ".hbs");
 app.use(helmet());
 app.use(morgan("dev"));
 app.set("PORT", process.env.PORT|| 7678);
-app.set("NODE_ENV", process.argv[0] === "node" ? "production" : "development");
+app.set("NODE_ENV", process.env.NODE_ENV || "development");
 
 app.use("/", routes);
 

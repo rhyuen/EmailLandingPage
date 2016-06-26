@@ -1,11 +1,58 @@
 <!--Redirect in 5 seconds-->
 <meta http-equiv="refresh" content="5,url=/"/>
-<p>
-  An email has been sent to {{confirm_email}}.
-</p>
-<p>
-  Thank you so much for your interest, {{confirm_name}}.
-</p>
-<p>
-  <a href = "/">Click here to add a friend's email address.</a>
-</p>
+<style>
+  html{
+    background-image: url("../images/fw2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: fixed;
+  }
+
+  .mdl-card__title{
+    background: url("../images/spacex.jpg") center/cover;
+  }
+
+  .mdl-cell{
+    height: 300px;
+  }
+
+  .mdl-card{
+    width: 400px;
+  }
+</style>
+<div class = "mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--4-col"></div>
+</div>
+<div class = "mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--4-col">
+    <div class = "mdl-card mdl-shadow--2dp">
+      <div class = "mdl-card__title">
+        <h2 class = "mdl-card__title-text">Thank you</h2>
+      </div>
+      <div class = "mdl-card__supporting-text">
+        <p>An email has been sent to {{confirm_email}}.</p>
+        <p>Thank you so much for your interest, {{confirm_name}}.</p>
+        <p>Your interest means so very much to me.</p>
+        <p>You'll now be redirected back to the signup page.</p>
+      </div>
+      <div class = "mdl-card__actions mdl-card--border">
+        <div id = "progress_bar" class = "mdl-progress mdl-js-progress"></div>
+      </div>
+    </div>
+  </div>
+  <div class="mdl-cell mdl-cell--4-col"></div>
+</div>
+<div class = "mdl-grid">
+  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--4-col"></div>
+  <div class="mdl-cell mdl-cell--4-col"></div>
+</div>
+
+<script type = "text/javascript">
+  document.querySelector("#progress_bar").addEventListener("mdl-componentupgraded", function(){
+    this.MaterialProgress.setProgress(44);
+  });
+</script>
