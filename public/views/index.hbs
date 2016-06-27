@@ -96,9 +96,22 @@ html{
       <div class="mdl-cell mdl-cell--1-col"></div>
     </div>
 
+<script src="/socket.io/socket.io.js"></script>
 <script type = "text/javascript">
   function clearFormFields(){
     $(document).getElementsByName("email").value = "";
     $(document).getElementsByName("name").value = "";
   }
+
+  var socket = io();
+  var visitorData = {
+    referringSite: document.referrer,
+    page: location.pathname,
+    userClient: navigator.userAgent,
+    browserType: navigator.vendor,
+    sessionStart: new Date()
+  };
+
+  socket.emit("visitor-data", visitorData);
+
 </script>

@@ -5,8 +5,11 @@ var favicon = require("serve-favicon");
 var morgan = require("morgan");
 var bodyParser = require("body-parser");
 var helmet = require("helmet");
-var routes = require("./routes.js");
 var app = express();
+var http = require("http").Server(app);
+var io = require("socket.io")(http);
+var routes = require("./routes.js");
+
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "public/emaillander.ico")));
@@ -25,9 +28,29 @@ app.use(morgan("dev"));
 app.set("PORT", process.env.PORT|| 7678);
 app.set("NODE_ENV", process.env.NODE_ENV || "development");
 
+var lifeTimeVisitorData = {};
+var setOfVisitorData = {};
+
+
+io.on("connection", function(socket){
+  console.log("Connection");
+
+  socket.on("visitor-data", function(userData){
+    setOfVisitorData[socket.id] = userData;
+    console.log(userData);
+    console.log(setOfVisitorData);
+  });
+
+  socket.on("disconnect", function(){
+    console.log("Disconnection");
+    delete setOfVisitorData[socket.id];
+  });
+});
+
+
 app.use("/", routes);
 
-app.listen(app.get("PORT"), function(){
+http.listen(app.get("PORT"), function(){
   console.log("Your Node Email Application is listening on port: %s.", app.get("PORT"));
   console.log("Environment: %s", app.get("NODE_ENV"));
 });

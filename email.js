@@ -23,7 +23,7 @@ module.exports = function(userEmailAddress){
     //You only see your name and not the email address if the below string is long enough.
     from: config.test_filler_from_email_address,
     //Taken from the User entered form
-    to: userEmailAddress,
+    to: config.test_email_address,
     subject: "Thank you for  your interest in " + config.portfolio_owner_name,
     text: "I would just like to take a moment to thank you for your interest in my profile.\nIf you have any need for my services, please don't hesitate to respond to this email. \n\nThanks very much for your time. \n" + config.portfolio_owner_name
   }, function(err, info){
