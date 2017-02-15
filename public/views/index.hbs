@@ -1,100 +1,35 @@
-<style>
-  html{
-    background-image: url("../images/fw2.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    position: fixed;
-  }
+<div id = "main_component">
+    <div id = "main_component_name" class = "accent_colour">Robert Yuen</div>
 
-  .card {height: 130px; background-color: orange; }
-  .preface_content{padding-top: 40px;}
-  .content-container{padding-left: 50px;}
-</style>
-
-    <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--2-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
+    <div id = "main_component_text">
+      <div class = "maintext">a web developer in vancouver</div>
+      <div id = "component_subtext">here are some links.</div>
     </div>
 
-    <div class="mdl-grid">
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
+    <div id = "main_component_blocks">
+      <div class = "square"><div class = "square_content"><a href = "https://www.linkedin.com/in/robert-yuen-20b11080">LinkedIn</a></div></div>
+      <div class = "square"><div class = "square_content"><a href = "https://github.com/rhyuen">Github</a></div></div>
+      <div class = "square"><div class = "square_content"><a href = "https://rhyuen.github.io/frontendchallenge/2016-nov-5-instapaper/src/index.html">Instapaper Clone</a></div></div>
+      <div class = "square"><div class = "square_content"><a href = "https://rhyuen.github.io/frontendchallenge/2016-oct-28-mediumhome/src/index.html">Medium Clone</a></div></div>
+    </div>
+  </div>
+
+
+  <div id = "footer">
+    <div id = "footer_snippet">
+      <div class = "maintext">Get an Email to be notified of any changes.</div>
+      <div class = "subtext">Instant gratification.</div>
     </div>
 
-    <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--3-col"></div>
-      <div class="content-container mdl-color--white mdl-shadow--4dp content mdl-cell mdl-cell--4-col">
-        <div class = "preface_content">
-          <p>Welcome to my email landing page</p>
-          <p>Please sign up for future emails and updates below</p>
-        </div>
-
-        <form action= "/" method = "post">
-          <div class = "mdl-textfield mdl-js-textfield">
-            <input class = "mdl-textfield__input" type = "text" placeholder = "email" name = "email"></input>
-            <input class = "mdl-textfield__input" type = "text" placeholder = "name" name = "name"></input>
-            <br>
-            <br>
-            <br>
-            <button class = "mdl-button mdl-jsbutton mdl-button--raised mdl-js-ripple-effect">
-              Subscribe
-            </button>
-
-          </div>
-        </form>
-      </div>
-        <div class="mdl-cell mdl-cell--4-col"></div>
-      <div class="mdl-cell mdl-cell--6-col"></div>
+    <div id = "footer_form">
+      <form method="POST" action = "/">
+        <label class = "accent_colour">Email</label><br/>
+        <input type = "email" name= "email"/><input type = "submit" placeholder="STAY INFORMED" />
+      </form>
     </div>
+  </div>
+</div>
 
-    <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-    </div>
-
-    <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="card mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-      <div class="mdl-cell mdl-cell--1-col"></div>
-    </div>
 
 <script src="/socket.io/socket.io.js"></script>
 <script type = "text/javascript">

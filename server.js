@@ -12,7 +12,7 @@ var routes = require("./routes.js");
 
 
 app.use(express.static(path.join(__dirname, "public")));
-app.use(favicon(path.join(__dirname, "public/emaillander.ico")));
+app.use(favicon(path.join(__dirname, "public/ry.png")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.set("views", path.join(__dirname, "public/views"));

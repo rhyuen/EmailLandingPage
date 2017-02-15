@@ -1,0 +1,154 @@
+html{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+}
+
+
+#main_component{
+  box-sizing: border-box;
+  height: 80%;
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  background-image: url("../../images/fw2.jpg");
+  background-size: cover;
+  content: ".";
+  position: relative;
+}
+
+#main_component:before{
+  content: "";
+  display: block;
+  position:absolute;
+  background: rgba(0,0,0,0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+#main_component_name{
+  font-weight: bold;
+  font-size: 26px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 3;
+}
+
+#main_component_text{
+  padding-top: 5%;
+  padding-bottom: 5%;
+  font-size: 92px;
+  color: white;
+  text-transform: uppercase;
+  z-index: 3;
+  position: relative;
+}
+#main_component_text #component_subtext{
+  font-size: 30px;
+  color: #8c8c85;
+}
+
+#main_component_blocks{
+  position: relative;
+  z-index: 3;
+}
+
+.accent_colour{
+  color: orange;
+}
+
+.maintext{
+  position: relative;
+  color: white;
+  font-size: 100%;
+  z-index: 3;
+}
+
+
+.subtext{
+  position: relative;
+  color: #8c8c85;
+  font-size: 90%;
+  z-index: 3;
+}
+
+#main_compontent_text .maintext{
+  z-index: 4;
+}
+#main_content_text .subtext{
+  z-index: 4;
+}
+
+
+
+.square{
+  background-color: orange;
+  position: relative;
+  width: 10%;
+  display: inline-block;
+  text-align: left;
+}
+
+.square:after{
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.square_content{
+  position: absolute;
+  padding-left: 10%;
+  padding-top: 80%;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+}
+.square_content a{
+  text-decoration: none;
+  color: black;
+}
+
+#footer{
+  box-sizing: border-box;
+  height: 20%;
+  width: 100%;
+  background-color: rgb(31,32,54);
+  padding: 4% 10%;
+  display: table;
+  color: white;
+}
+#footer #footer_snippet{
+  display: table-cell;
+  font-size: 26px;
+  height: 20%;
+}
+#footer_form{
+  display: table-cell;
+  vertical-align: top;
+}
+
+#footer_form input[type="email"]{
+  border: 0;
+  margin-right: 0;
+  padding: 2% 4%;
+}
+#footer_form input[type="submit"]{
+  border: 0;
+  background-color: orange;
+  color: white;
+  margin-left: 0;
+  padding: 2% 4%;
+}
