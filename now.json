@@ -1,0 +1,9 @@
+{
+  "name": "mailgenr8r",
+  "alias": [
+    "mailgenr8r"
+  ],
+  "engines": {
+    "node": "7.0.0"
+  }
+}

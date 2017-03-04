@@ -1,5 +1,5 @@
-var request = require("request");
-var expect = require("chai").expect;
+const request = require("request");
+const expect = require("chai").expect;
 
 describe("Server GET", function(){
   it("should return 200", function(done){

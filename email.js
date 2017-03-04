@@ -1,9 +1,11 @@
-var nodemailer = require("nodemailer");
-var config = require("./config.js");
+"use strict";
+
+let nodemailer = require("nodemailer");
+let config = require("./config.js");
 
 
 module.exports = function(userEmailAddress){
-  var transporter = nodemailer.createTransport({
+  let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
       //Service EmailAddress

@@ -1,17 +1,21 @@
-var express = require("express");
-var exphbs = require("express-handlebars");
-var path = require("path");
-var favicon = require("serve-favicon");
-var morgan = require("morgan");
-var bodyParser = require("body-parser");
-var helmet = require("helmet");
-var app = express();
-var http = require("http").Server(app);
-var io = require("socket.io")(http);
-var routes = require("./routes.js");
+"use strict";
+
+const express = require("express");
+const exphbs = require("express-handlebars");
+const path = require("path");
+const favicon = require("serve-favicon");
+const morgan = require("morgan");
+const bodyParser = require("body-parser");
+const helmet = require("helmet");
+const app = express();
+const compression = require("compression");
+const http = require("http").Server(app);
+const io = require("socket.io")(http);
+const routes = require("./routes.js");
 
 
 app.use(express.static(path.join(__dirname, "public")));
+app.use(compression());
 app.use(favicon(path.join(__dirname, "public/ry.png")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));

@@ -1,9 +1,11 @@
-var gulp = require("gulp");
-var mocha = require("gulp-mocha");
-var bg = require("gulp-bg");
-var browserSync = require("browser-sync").create();
+const gulp = require("gulp");
+const mocha = require("gulp-mocha");
+const bg = require("gulp-bg");
+const browserSync = require("browser-sync").create();
+const del = require("del");
+const imagemin = require("imagemin");
 
-var bgstart;
+let bgstart;
 
 gulp.task("start", bgstart = bg("node", "./server.js"));
 

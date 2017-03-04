@@ -7,10 +7,31 @@
     </div>
 
     <div id = "main_component_blocks">
-      <div class = "square"><div class = "square_content"><a href = "https://www.linkedin.com/in/robert-yuen-20b11080">LinkedIn</a></div></div>
-      <div class = "square"><div class = "square_content"><a href = "https://github.com/rhyuen">Github</a></div></div>
-      <div class = "square"><div class = "square_content"><a href = "https://rhyuen.github.io/frontendchallenge/2016-nov-5-instapaper/src/index.html">Instapaper Clone</a></div></div>
-      <div class = "square"><div class = "square_content"><a href = "https://rhyuen.github.io/frontendchallenge/2016-oct-28-mediumhome/src/index.html">Medium Clone</a></div></div>
+      <div class = "square">
+        <div class = "square_content" title = "For my LinkedIn Profile.">
+          <a href = "https://www.linkedin.com/in/robert-yuen-20b11080" target = "_blank">LinkedIn</a>
+        </div>
+      </div>
+      <div class = "square">
+        <div class = "square_content" title = "For my Github Profile.">
+          <a href = "https://github.com/rhyuen" target = "_blank">Github</a>
+        </div>
+      </div>
+      <div class = "square">
+        <div class = "square_content" title = "For my Instapaper Userpage Clone.">
+          <a href = "https://rhyuen.github.io/frontendchallenge/2016-nov-5-instapaper/src/index.html" target = "_blank">Instapaper Clone</a>
+        </div>
+      </div>
+      <div class = "square">
+        <div class = "square_content" title = "For my Medium Homepage Clone.">
+          <a href = "https://rhyuen.github.io/frontendchallenge/2016-oct-28-mediumhome/src/index.html" target = "_blank">Medium Clone</a>
+        </div>
+      </div>
+      <div class = "square">
+        <div class = "square_content" title = "For my RSS Reader.">
+          <a href = "https://yarr-reader.now.sh">RSS Reader</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -31,22 +52,5 @@
 </div>
 
 
-<script src="/socket.io/socket.io.js"></script>
-<script type = "text/javascript">
-  function clearFormFields(){
-    $(document).getElementsByName("email").value = "";
-    $(document).getElementsByName("name").value = "";
-  }
-
-  var socket = io();
-  var visitorData = {
-    referringSite: document.referrer,
-    page: location.pathname,
-    userClient: navigator.userAgent,
-    browserType: navigator.vendor,
-    sessionStart: new Date()
-  };
-
-  socket.emit("visitor-data", visitorData);
-
-</script>
+<script src = "/socket.io/socket.io.js"></script>
+<script type = "text/javascript" src = "views/js/index.js"></script>

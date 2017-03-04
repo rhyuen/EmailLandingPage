@@ -1,9 +1,11 @@
-var express = require("express");
-var router = express.Router();
-var path = require("path");
-var mongoose = require("mongoose");
-var Email = require("./models/email.js");
-var config = require("./config.js");
+"use strict";
+
+const express = require("express");
+const router = express.Router();
+const path = require("path");
+const mongoose = require("mongoose");
+const Email = require("./models/email.js");
+const config = require("./config.js");
 
 router.get("/", function(req, res){
   res.render("index");
