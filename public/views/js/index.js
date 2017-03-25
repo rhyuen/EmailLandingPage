@@ -1,3 +1,5 @@
+"use strict";
+
 function clearFormFields(){
   $(document).getElementsByName("email").value = "";
   $(document).getElementsByName("name").value = "";
@@ -20,3 +22,18 @@ $(document).ready(function(){
   socket.emit("visitor-data", visitorData);
 
 });
+
+if('serviceWorker' in navigator){
+  navigator.serviceWorker
+    .register("./service-worker.js")
+    .then(() => {
+      console.log(
+        "[%s] Service Worker Registered.",
+        new Date().toLocaleString()
+      );
+    })
+    .catch((err) => {
+      if(err)
+        console.log(err);
+    });
+}

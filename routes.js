@@ -4,47 +4,36 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 const mongoose = require("mongoose");
+const validator = require("validator");
 const Email = require("./models/email.js");
 const config = require("./config.js");
 
-router.get("/", function(req, res){
-  res.render("index");
-  console.log(req.hostname);
-  console.log(req.ip);
+router.get("/", (req, res) => {
+  res.status(200).render("index");
 });
 
-router.post("/", function(req, res){
-  mongoose.connect(config.db, function(err){
+router.post("/", (req, res) => {
+  var formContent = new Email({
+    email: validator.escape(req.body.email),
+    name: validator.escape(req.body.name),
+    hostname: validator.escape(req.hostname),
+    ip: validator.escape(req.ip)
+  });
+
+  require("./email.js")(formContent.email);
+
+  formContent.save(function(err, data){
     if(err)
-      console.error(err);
-    console.log("Db conn attempted.");
-
-    //console.log("%s, %s, %s", req.body.email, req.body.name, req.ip);
-
-
-    var formContent = new Email({
-      email: req.body.email,
-      name: req.body.name,
-      ip: req.ip
-    });
-
-    //Test for DB Error Gaffes.  And put up a fail whale message.
-
-    require("./email.js")(req.body.email);
-
-    formContent.save(function(err, data){
-      if(err)
-        console.error(err);
-      console.log("Email entry added:  %s", data);
-      res.render("confirm", {confirm_email: req.body.email, confirm_name: req.body.name});
-      mongoose.disconnect(function(){
-        console.log("Connection closed.");
-      });
+      return console.error(err);
+    console.log("[%s] Email entry added:  %s", new Date().toLocaleString(), data);
+    res.render("confirm", {
+      confirm_email: validator.escape(req.body.email),
+      confirm_name: validator.escape(req.body.name)
     });
   });
 });
 
-router.get("/*", function(req, res){
+router.get("/*", (req, res) => {
   res.redirect("/");
 });
 

@@ -1,0 +1,21 @@
+{
+  "name": "validator",
+  "main": "validator.js",
+  "version": "0.0.5",
+  "authors": [
+    "Cameron Stitt <cameron@castitt.com>"
+  ],
+  "description": "Easy JavaScript form validation.",
+  "license": "MIT",
+  "homepage": "https://github.com/cam-stitt/validator",
+  "_release": "0.0.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.5",
+    "commit": "924dc133fcadc6212372ed8a7341adc1362259e6"
+  },
+  "_source": "https://github.com/cam-stitt/validator.git",
+  "_target": "~0.0.5",
+  "_originalSource": "validator",
+  "_direct": true
+}
